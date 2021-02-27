@@ -1,17 +1,24 @@
 package entities;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 public class Order {
     private int id;
-    private Client client;
-    private List<Product> listOfProducts;
+    private final Client client;
+    private final List<Product> listOfProducts;
     private OrderStatus orderStatus = OrderStatus.IN_PROGESS;
     private double orderValue;
+    private int loyalityPoints;
+    private final Instant dateOfOrder = Instant.now();
 
-    public Order(Client client, List<Product> listOfProducts) {
+    public Order(Client client, List<Product> listOfProducts, double orderValue, int loyalityPoints) {
         this.client = client;
         this.listOfProducts = listOfProducts;
+        this.orderValue = orderValue;
+        this.loyalityPoints = loyalityPoints;
     }
 
     public int getId() {

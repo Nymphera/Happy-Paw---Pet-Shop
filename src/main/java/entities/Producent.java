@@ -2,11 +2,11 @@ package entities;
 
 public class Producent {
     private int id;
-    private int producentName;
+    private String producentName;
     private String country;
 
 
-    public Producent(int producentName, String country) {
+    public Producent(String producentName, String country) {
         this.producentName = producentName;
         this.country = country;
     }
@@ -15,11 +15,11 @@ public class Producent {
         return id;
     }
 
-    public int getProducentName() {
+    public String getProducentName() {
         return producentName;
     }
 
-    public void setProducentName(int producentName) {
+    public void setProducentName(String producentName) {
         this.producentName = producentName;
     }
 

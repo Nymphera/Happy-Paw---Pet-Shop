@@ -9,14 +9,12 @@ public abstract class Product {
     private Category category;
     private String description;
 
-    public Product(int id, String productName, double price, int quantity, Producent producent,
-                   Category category, String description) {
-        this.id = id;
+    public Product(String productName, double price, int quantity, Producent producent,
+                  String description) {
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
         this.producent = producent;
-        this.category = category;
         this.description = description;
     }
 
@@ -70,5 +68,14 @@ public abstract class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + productName + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", producent=" + producent.getProducentName() +
+                ", ";
     }
 }

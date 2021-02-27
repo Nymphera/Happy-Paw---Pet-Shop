@@ -2,7 +2,7 @@ package entities;
 
 public class Client extends User{
     private String nickName;
-    private int loyalityPoints;
+    private int loyalityPoints = 0;
 
     public Client(String email, String password) {
         super(email, password);
