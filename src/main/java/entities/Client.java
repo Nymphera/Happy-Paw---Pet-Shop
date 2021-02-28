@@ -1,7 +1,15 @@
 package entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "clients")
 public class Client extends User{
+    @Column (name = "username")
     private String nickName;
+    @Column (name = "loyality_points")
     private int loyalityPoints = 0;
 
     public Client(String email, String password) {

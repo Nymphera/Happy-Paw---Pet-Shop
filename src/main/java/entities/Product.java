@@ -1,12 +1,24 @@
 package entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table (name = "products")
 public abstract class Product {
+    @Id
+    @GeneratedValue
     private int id;
+    @Column (name = "product_name")
     private String productName;
+    @Column (name = "price")
     private double price;
+    @Column (name = "quantity")
     private int quantity;
+    @ManyToOne
     private Producent producent;
+    @Column (name = "cat")
     private Category category;
+    @Column
     private String description;
 
     public Product(String productName, double price, int quantity, Producent producent,

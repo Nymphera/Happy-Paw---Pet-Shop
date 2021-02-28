@@ -1,7 +1,13 @@
 package entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class DogFood extends Product{
+    @Column
     private String taste;
+    @Column
     private double weight;
 
 

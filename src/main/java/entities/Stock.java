@@ -10,6 +10,10 @@ public class Stock {
         return listOfProducts;
     }
 
+    public void setListOfProducts(List<Product> listOfProducts) {
+        this.listOfProducts = listOfProducts;
+    }
+
     public void addProduct(Product product) {
         listOfProducts.add(product);
     }

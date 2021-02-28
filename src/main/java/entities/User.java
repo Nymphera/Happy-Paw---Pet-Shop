@@ -1,15 +1,30 @@
 package entities;
 
+import javax.persistence.*;
+
+
+@MappedSuperclass
 public abstract class User {
+    @Id
+    @GeneratedValue
     private int id;
+    @Column (name = "email")
     private String email;
+    @Column (name = "password")
     private String password;
+    @Column (name = "name")
     private String name;
+    @Column (name = "surname")
     private String surname;
+    @Column
     private String city;
+    @Column
     private String street;
+    @Column (name = "houde_number")
     private String houseNumber;
+    @Column (name = "postal_code")
     private String postalCode;
+    @Column (name = "telephone_number")
     private String telephoneNumber;
 
     public User(String email, String password) {

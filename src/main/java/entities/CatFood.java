@@ -1,5 +1,9 @@
 package entities;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+
+@Entity
 public class CatFood  extends Product{
     private String taste;
     private double weight;
