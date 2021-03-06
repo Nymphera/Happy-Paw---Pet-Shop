@@ -12,6 +12,9 @@ public class Client extends User{
     @Column (name = "loyality_points")
     private int loyalityPoints = 0;
 
+    public Client() {
+    }
+
     public Client(String email, String password) {
         super(email, password);
     }

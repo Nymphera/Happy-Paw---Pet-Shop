@@ -11,6 +11,10 @@ public class Cart {
     private List<Product> listOfProducts = new ArrayList<>();
     private double cartValue = 0;
 
+    public Cart(Client client) {
+        this.client = client;
+    }
+
     public void addtoCart (Product product) {
         if (product.getQuantity() > 0) {
             listOfProducts.add(product);

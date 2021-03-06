@@ -10,6 +10,8 @@ public class DogFood extends Product{
     @Column
     private double weight;
 
+    public DogFood() {
+    }
 
     public DogFood(String productName, double price, int quantity, Producent producent, String description,
                    String taste, double weight) {

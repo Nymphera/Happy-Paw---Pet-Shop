@@ -8,7 +8,7 @@ public abstract class User {
     @Id
     @GeneratedValue
     private int id;
-    @Column (name = "email")
+    @Column (name = "email", unique = true)
     private String email;
     @Column (name = "password")
     private String password;
@@ -26,6 +26,9 @@ public abstract class User {
     private String postalCode;
     @Column (name = "telephone_number")
     private String telephoneNumber;
+
+    public User() {
+    }
 
     public User(String email, String password) {
         this.email = email;

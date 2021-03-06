@@ -13,9 +13,9 @@ public class Order {
     @GeneratedValue
     private int id;
     @ManyToOne
-    private final Client client;
+    private  Client client;
     @OneToMany
-    private final List<Product> listOfProducts;
+    private  List<Product> listOfProducts;
     @Column (name = "status")
     private OrderStatus orderStatus = OrderStatus.IN_PROGESS;
     @Column (name = "order_value")
@@ -24,6 +24,9 @@ public class Order {
     private int loyalityPoints;
     @Column (name = "date_of_order")
     private final Instant dateOfOrder = Instant.now();
+
+    public Order() {
+    }
 
     public Order(Client client, List<Product> listOfProducts, double orderValue, int loyalityPoints) {
         this.client = client;
@@ -64,4 +67,15 @@ public class Order {
         this.orderValue = orderValue;
     }
 
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", client=" + client +
+                ", orderStatus=" + orderStatus +
+                ", orderValue=" + orderValue +
+                ", loyalityPoints=" + loyalityPoints +
+                ", dateOfOrder=" + dateOfOrder +
+                '}';
+    }
 }

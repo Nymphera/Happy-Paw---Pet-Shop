@@ -21,8 +21,11 @@ public abstract class Product {
     @Column
     private String description;
 
+    public Product() {
+    }
+
     public Product(String productName, double price, int quantity, Producent producent,
-                  String description) {
+                   String description) {
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;

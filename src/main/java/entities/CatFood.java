@@ -8,6 +8,8 @@ public class CatFood  extends Product{
     private String taste;
     private double weight;
 
+    public CatFood() {
+    }
 
     public CatFood(String productName, double price, int quantity, Producent producent, String description,
                    String taste, double weight) {

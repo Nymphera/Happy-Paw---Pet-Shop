@@ -17,6 +17,8 @@ public class Producent {
     @OneToMany
     private List<Product> listOfProducts;
 
+    public Producent() {
+    }
 
     public Producent(String producentName, String country) {
         this.producentName = producentName;
